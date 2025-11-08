@@ -2,18 +2,18 @@
 
 <!Doctype html>
 <html>
+    <meta charset="UTF-8">  
 
     <link rel = "stylesheet" href = "{% static 'css/Main.css' %}">
+    <script src="/static/JavaScript/Main.js" defer></script>
 
-    <header>
-        {% block header_content%}
-            header stuff here
-        {% endblock header_content%}
-    </header>
-    
+   <nav-bar></nav-bar>
+
+
+
     <body>
-        {% block body_content%}
-        {% endblock body_content%}
+    {% block Main_Content %}
+    {% endblock Main_Content %}
     </body>
-
+    
 </html>
