@@ -29,7 +29,7 @@ class LargeCard extends HTMLElement {
     const p = this.getAttribute('p')
     this.innerHTML = `
   <div class = 'large_card'>
-    <img src= "${img_path}" alt="logo">
+    <img src= "{% static 'img\Oh_Yeah.jpg' %}" alt="logo">
     <h1>${h1}</h1>
     <p>${p}</p>
   </div>
