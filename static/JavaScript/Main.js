@@ -24,16 +24,32 @@ customElements.define('nav-bar', NavBar);
 class LargeCard extends HTMLElement {
   constructor() {
     super();
+
     const img_path = this.getAttribute('img_path')
     const h1 = this.getAttribute('h1')
     const p = this.getAttribute('p')
-    this.innerHTML = `
-  <div class = 'large_card'>
-    <img src= "${img_path}" alt="logo">
-    <h1>${h1}</h1>
-    <p>${p}</p>
-  </div>
-    `;
+
+    if(img_path == null){
+      this.innerHTML = `
+      <div class = 'large_card'>
+        <h1>${h1}</h1>
+        <p>${p}</p>
+        <p>you are awesome</p>
+      </div>
+        `;
+    }
+    else{
+      this.innerHTML = `
+      <div class = 'large_card'>
+        <img src= "${img_path}" alt="logo">
+        <h1>${h1}</h1>
+        <p>${p}</p>
+      </div>
+        `;
+    }
+
+
+    
   }
 }
 customElements.define('large-card', LargeCard);
